@@ -1,0 +1,100 @@
+
+.main-container {
+    grid-column: 1/-1;
+    grid-row: 6;
+}
+
+.gridOne {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* Since inline style is requested there is not need */
+/* .gridOne p:last-child {
+    color:blue;
+} */
+.gridTwo {
+    display:grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+.gridTwo-One {
+    background-color: red;
+}
+.gridTwo-Two {
+    background-color: blue;
+}
+.gridTwo-Three {
+    background-color: yellow;
+}
+.gridThree {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 75px 225px;
+    /* watch out! the second row should be three times as large as the first */
+    width: 500px;
+    height: 300px;    
+}
+.gridThree-content:first-child {
+    background-color: greenyellow;
+}
+
+.gridThree-content:last-child img {
+    width: 500px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.gridFour {
+    margin-top:4vw;
+    display:grid;
+    grid-column: 1/-1;
+    grid-row: 2;
+    width: 500px;
+    background-color: green;
+}
+#gridFour-text {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gridFive {
+    display:grid;
+    grid-column: 1/-1;
+    grid-row: 2;
+    grid-gap:4vw;
+}
+
+/* watch out! According to instructions: 
+the first picture should be twice as wide as the second */
+#gridFive-images img:first-child {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 4vw;
+}
+#gridFive-images img:last-child {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* watch out! According to the image shown in instructions: 
+both have the same width and height
+Therefore, if we wanted that it would be the following code */
+/* #gridFive-imageso img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+} 
+#gridFive-images img:first-child {
+    margin-right: 4vw;
+}*/
+
+.gridSix {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: lightgrey;
+    width: 500px;
+}
+.gridSix >div >p {
+   font-family: "Oswald", sans-serif;
+}

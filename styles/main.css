@@ -27,8 +27,7 @@
 }
 .gridThree {
     display:grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 75px 225px;
+    grid-template-rows: 1fr 3fr;
     /* watch out! the second row should be three times as large as the first */
     width: 500px;
     height: 300px;    
@@ -61,11 +60,24 @@
     grid-column: 1/-1;
     grid-row: 2;
     grid-gap:4vw;
+    width: 500px;
 }
+#gridFive-images {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
 
+}
+#gridFive-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+#gridFive-images img:last-child {
+    text-align: left;
+}
 /* watch out! According to instructions: 
 the first picture should be twice as wide as the second */
-#gridFive-images img:first-child {
+/* #gridFive-images img:first-child {
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -75,7 +87,7 @@ the first picture should be twice as wide as the second */
     width: 200px;
     height: 200px;
     object-fit: cover;
-}
+} */
 
 /* watch out! According to the image shown in instructions: 
 both have the same width and height
